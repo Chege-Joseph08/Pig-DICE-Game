@@ -14,12 +14,11 @@ function Player(turn) {
   this.playerName;
 }
 
-// checking for 1
+// checking for a winner and 1
 Player.prototype.rollone = function() {
   if (this.roll === 1) {
   this.tempscore = 0;
-  alert("Sorry " + this.playerName + ", you rolled a 1! Your turn is over!")
-  // this.changeturn();
+  alert("Sorry " + this.playerName + ", OOPS! rolled a 1! Your turn is over!")
   } else {
   this.tempscore += this.roll;
   }
@@ -29,18 +28,9 @@ Player.prototype.rollone = function() {
 Player.prototype.hold = function () {
   this.totalscore += this.tempscore;
   this.tempscore = 0;
-  // this.changeturn();
-  alert(this.playerName + ", your turn is over, pass the mouse!");
+  alert(this.playerName + ", your turn is over, Your Its Your Friends Turn!");
 }
 
-// // changing turn
-// Player.prototype.changeturn = function () {
-//   if (this.roll ===1) {
-//     this.turn = false;
-//   } else {
-//     this.turn = true;
-//   }
-// }
 // check for 100
 Player.prototype.winnerCheck = function () {
   if (this.totalscore >= 100) {
@@ -49,7 +39,6 @@ Player.prototype.winnerCheck = function () {
 }
 
 Player.prototype.newGame = function () {
-  //debugger;
   this.roll = 0;
   this.tempscore = 0;
   this.totalscore = 0;
