@@ -1,0 +1,17 @@
+.player-console {
+  display: none;
+}
+
+body {
+  background-image: url("../img/dice.jpg");
+}
+
+.jumbotron {
+  background-color: rgba(100, 100, 100, 0.5);
+  color: #ffffff;
+}
+
+.well {
+  background-color: rgba(100, 100, 100, 0.5);
+  color: #ffffff;
+}
